@@ -1,0 +1,940 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+div.page-center  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF5700;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.link-like {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.delete-community-button {
+  padding: 14px;
+  width: 50%;
+  border-radius: 14px;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  background-color: #92291c;
+  margin-top: 20px;
+  transition: all 0.5s ease;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+} 
+
+
+
+
+.communityDivide {
+  gap: 20px;
+  display: flex;
+}
+
+.idk {
+  display: flex;
+  gap: 20px;
+}
+
+#white {
+  background-color: white;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+
+div.welcome-form-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  width: 80%;
+  height: 80%;
+  border: 2px solid #463e3a;
+  background-color: #f5f5f5;
+  box-shadow: 0px 12px 30px rgba(168, 35, 35, 0.3);
+}
+
+div.welcome-form-greeting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #FF5700;
+  width: 50%;
+}
+
+.sideToSide {
+  display: flex;
+  gap: 20px;
+}
+
+
+.deleteUser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.deleteUser:hover {
+  background-color: #FF5700;
+}
+
+li {
+  padding-bottom: 10px;
+}
+
+
+div.welcome-form-greeting ion-icon {
+  font-size: calc(10vw + 10vh);
+}
+
+div.welcome-form-greeting h1 {
+  font-size: calc(3vw + 3vh);
+  text-align: center;
+  text-align:center;
+}
+
+
+div.welcome-form-button-container {
+  display: flex;
+  height: 100%;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: "Segoe UI", sans-serif;
+  flex-direction: column;
+  gap: calc(1.5vw + 1.5vh);
+}
+
+button.welcome-button {
+  width: 75%;
+  padding: 3%;;
+  font-family: "Segoe UI", sans-serif;
+  font-size: calc(1vw + 1vh);
+  font-weight: 600;
+  color: white;
+  background-color: #286387;
+  transition: all 0.5s ease;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+button.welcome-button:hover, button.submit-form-button:hover {
+  cursor: pointer;
+  background-color: #284d64;
+  transform: scale(1.1);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.delete-community-button:hover {
+  cursor: pointer;
+  background-color: #701f14;
+  transform: scale(1.1);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+div.credential-back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+div.credential-back-button button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 50px;
+  height: 50px;
+}
+
+div.credential-back-button button ion-icon {
+  font-size: 40px;
+}
+
+div.credential-back-button button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: rgb(223, 218, 218);
+}
+
+div.credential-form-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 80%;
+  gap: 20px;
+  padding: 25px;
+  padding-bottom: 35px;
+  border: 2px solid #463e3a;
+  background-color: #f5f5f5;
+  box-shadow: 0px 12px 30px rgba(168, 35, 35, 0.3);
+}
+
+div.credential-form-container h1 {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 18px;
+}
+
+form.credential-form {
+  display: flex;
+  height: 90%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+div.input-field {
+  display: flex;
+  width: 95%;
+  flex-direction: column;
+}
+
+div.input-field label {
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+div.input-field input {
+  padding: 12px;
+}
+
+div.input-field select {
+  display: inline-flex;
+  width: 500px;
+  padding: 10px;;
+}
+
+div.input-error {
+  min-height: 30px;
+  color: red;
+  padding-left: 5px;
+  padding-top: 5px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+button.submit-form-button {
+  padding: 14px;
+  width: 50%;
+  border-radius: 14px;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  background-color: #286387;
+  transition: all 0.5s ease;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+div.page-banner {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  z-index: 3;
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+
+button.banner-phreddit-button {
+  display: flex;
+  gap: 8px;
+  margin-left: 15px;
+  flex-direction: row;
+  align-items: center;
+  justify-content:center;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+
+button.banner-phreddit-button ion-icon {
+  font-size: 35px;
+  color: #FF5700;
+}
+
+button.banner-phreddit-button h1 {
+  font-size: 30px;
+  font-weight: 750;
+  color: #FF5700;
+}
+
+div.banner-buttons-container {
+  display: flex;
+  margin-right: 15px;
+  gap: 10px;
+}
+
+div.banner-buttons-container button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  height: 40px;
+  gap: 5px;
+  border-radius: 12px;
+  outline: none;
+  border: transparent;
+}
+
+button.banner-user-button {
+  width: 150px;
+}
+
+button.banner-user-button ion-icon {
+  font-size: 20px;
+}
+
+button.banner-user-button p {
+  padding: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: 600;
+}
+
+button.banner-button {
+  padding: 15px;
+}
+
+button.banner-button ion-icon {
+  font-size: 15px;
+}
+
+button.banner-button p {
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+form.search-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #D7DFE2;
+  padding: 13px;
+  border-radius: 30px;
+  width: 900px;
+}
+
+form.search-bar ion-icon {
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+form.search-bar input {
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+button.active-banner-button, button.inactive-banner-button:hover {
+  background-color: #FF5700;
+}
+
+
+div.join-leave-community {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 20px;
+  display: flex;
+}
+
+div.join-leave-community button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #284d64;
+  color: white;
+  cursor: pointer;
+}
+
+div.post-container {
+  padding-top: 20px;
+
+}
+
+div.join-leave-community button:hover {
+  background-color: #13354b;
+}
+
+
+
+
+
+div.page-horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+div.navigation {
+  position: fixed;
+  width: 275px;
+  top: 60px;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  justify-content: center;
+  z-index: 2;
+  background-color: white;
+  border-right: 1px solid black;
+}
+
+div.navigation-container {
+  display: flex;
+  padding: 20px;
+  margin: 0 auto;
+  gap: 2px;
+  flex-direction: column;
+}
+
+div.navigation-section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+}
+
+h2.navigation-titles, h3.navigation-titles {
+  padding-bottom: 5px;
+  font-family: "IBM Plex Sans", sans-serif;
+  padding-left: 10px;
+}
+
+button.navigation-button {
+  display: flex;
+  background-color: rgb(228, 228, 228);
+  width: 100%;
+  height: 40px;
+  padding-left: 20px;
+  align-items: center;
+  border-radius: 8px;
+  padding-right: 20px;
+  border-color: transparent;
+  cursor: pointer;
+  gap: 10px;
+}
+
+button.dead-button {
+  background-color: rgb(165, 165, 165);
+}
+
+button.dead-button:hover {
+  cursor: default;
+}
+
+button.activated-action-button {
+  background-color: #FF5700;
+}
+
+button.activated-community-button {
+  background-color: #00D4BB;
+}
+
+button.inactive-community-button:hover {
+  background-color: #00D4BB;
+}
+
+button.inactive-action-button:hover {
+  background-color: #FF5700;
+}
+
+div.main-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 275px;
+  margin-top: 60px;
+  overflow-x: hidden;
+  height: calc(100vh - 60px);
+  width: calc(100% - 275px);
+}
+
+div.content-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+div.content-container div {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+
+div.post-button-container {
+  display: flex;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-bottom: 1px dotted black;
+}
+
+button.post-button {
+  display: flex;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  gap: 5px;
+  width: 100%;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 14px;
+  border: transparent;
+  overflow: hidden;
+}
+
+button.post-button:hover {
+  cursor: pointer;
+  background-color: rgb(235, 235, 235)
+}
+
+div.post-top {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+div.post-top ion-icon {
+  font-size: 25px;
+  width: 25px;
+  min-width: 25px;
+  padding-right: 10px;
+}
+
+div.post-top p {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 12px;
+  color: rgb(77, 77, 77);
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+div.post-top .top-bold {
+  color: black;
+  font-weight: 500;
+  max-width: 250px;
+  text-overflow: ellipsis; 
+}
+
+p.top-text  {
+  max-width: 250px;
+  text-overflow: ellipsis; 
+}
+
+div.post-top span {
+  padding-left: 5px;
+  padding-right: 7px;
+}
+
+div.post-title h1 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 450;
+  text-align: left;
+  padding-bottom: 2px;
+}
+
+
+div.post-link-flair p {
+  display: inline-flex;
+  text-align: left;
+  background-color: #124558;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 10px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+div.post-content {
+  padding-top: 8px;
+  font-family: "IBM Plex Sans", sans-serif;
+  text-align: left;
+}
+
+div.post-bottom {
+  display: flex;
+  gap: 15px;
+}
+
+div.post-bottom p {
+  padding-top: 8px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 13;
+  font-weight: 500;
+}
+
+
+button.sort-button {
+  width: 100px;
+}
+
+div.header-container {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  min-height: 50px;
+  border-bottom: 1px solid black;
+}
+
+div.header-container h4 {
+  max-width: 500px;
+  font-size: 14px;
+  padding-left: 10px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div.sort-buttons-container {
+  display: flex;
+  padding-right: 10px;
+  gap: 10px;
+}
+
+button.sort-button {
+  width: 80px;
+  height: 35px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: transparent;
+  font-weight: bold;
+}
+
+button.inactive-sort-button {
+  background-color: white;
+  color: #777777;
+}
+
+button.active-sort-button {
+  background-color: #D7DFE2;
+  color: black;
+}
+
+button.inactive-sort-button:hover {
+  background-color: #e5edf0;
+  color: black;
+}
+
+p.post-count {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  display:flex;
+  align-items: center;
+  padding-left: 10px;
+  height: 25px;
+}
+
+h3.post-section-divider {
+  padding-left: 5px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+  font-size: 18px;
+  font-family: "IBM Plex Sans", sans-serif;
+  border-bottom: 1px solid black;
+}
+
+button.navigation-button ion-icon {
+  font-size: 25px;
+  min-width: 25px;
+}
+
+button.navigation-button p {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: black;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+#communityBanner {
+  display: flex;
+  height: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 100px;
+  margin-top: 5px;
+  background-color: #FF5700;
+  border-radius: 12px;
+  margin-bottom: 60px;
+}
+
+#communityImg {
+  font-size: 80px;
+  width: 80px;
+  min-width: 80px;
+  position: relative;
+  top: 60px;
+  background-color: white;
+  border-radius: 100px;
+}
+
+.commentContainer {
+  padding-bottom: 10px;
+}
+
+#commentReply {
+  padding: 8px;
+  font-size: 12px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 550;
+  border: transparent;
+  padding-left: 14px;
+  padding-right: 14px;
+  border-radius: 14px;
+}
+
+#communityName {
+  font-family: "IBM Plex Sans", sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  position: relative;
+  top: 105px;
+  padding-left: 10px;
+}
+
+#communityDescriptionContainer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 4px;
+}
+
+#communityDescription {
+  background-color: rgb(245, 244, 244);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 18px;
+  padding-right: 18px;
+  border-radius: 14px;
+  text-align: left;
+}
+
+#aboutCommunity, #description {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 450;
+  font-size: 14px;
+  text-align: left;
+}
+
+#description {
+  padding-top: 20px;
+  color: rgb(77, 76, 76);
+}
+
+#communityTime {
+  font-size: 12px;
+  padding-top: 12px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+}
+
+div.content-credential-name {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+div.content-credential-name h1 {
+  padding-left: 20px;
+}
+
+form.content-credential-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blah {
+  padding-top: 40px;
+}
+
+
+.comment-containers {
+  padding-bottom: 20px;
+}
+
+
+.heading {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.comment-button {
+  cursor: pointer;
+  padding: 10px;
+  margin-top: 4px;
+  background-color: rgb(228, 228, 228);
+}
+
+.comment-button:hover {
+  background-color: #FF5700;
+}
+
+.dead-comment-button {
+  padding: 10px;
+  margin-top: 4px;
+  outline:none;
+  border: none;
+  background-color: rgb(165, 165, 165);
+  cursor:default;
+}
+
+.dead-comment-button:hover {
+  transform: none;
+  background-color: rgb(165, 165, 165);
+}
+
+
+.user-info {
+  display: flex;
+  padding-top: 40px;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.user-info ion-icon {
+  font-size: 80px;
+}
+
+.tab-button {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.tab-button:hover {
+  background-color: #FF5700;
+}
+
+
+.active-tab {
+  background-color: #FF5700;
+}
+
+
+.active-buttonContainer {
+  gap: 20px;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.inactive-tab {
+  background-color: lightgray
+}
+
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.active-header {
+  padding-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+  div.welcome-form-container {
+    flex-direction: column;
+  }
+
+  div.welcome-form-greeting {
+    height: 50%;
+    width: 100%;
+  }
+
+  div.welcome-form-button-container {
+    height: 50%;
+    width: 100%;
+  }
+
+
+}
+
+@media (max-width: 960px) {
+
+}
